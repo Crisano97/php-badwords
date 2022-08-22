@@ -1,4 +1,7 @@
 <?php 
+    $variabileTesto = "Lorem ipsum dolor sit, amet consectetur adipisicing elit.";
+    $badWord = $_GET['word'];
+    $testoCensurato = str_replace($badWord,'***',$variabileTesto);
 ?>
 
 <!DOCTYPE html>
@@ -13,20 +16,12 @@
     <h1>BAD WORDS</h1>
     <p>
         <?php 
-            $variabileTesto = "Lorem ipsum dolor sit, amet consectetur adipisicing elit.";
-            echo $variabileTesto;
-            echo strlen($variabileTesto);
-
-            // var_dump($variabileTesto);
-            // var_dump($_GET['word']); 
+            echo $variabileTesto . " " . strlen($variabileTesto);    
         ?>
     </p>
     <p>
-        <?php 
-            $testoCensurato = str_replace($_GET['word'],'***',$variabileTesto);
-            echo $testoCensurato;
-            echo strlen($testoCensurato);
-
+        <?php
+            echo $testoCensurato . " " . strlen($testoCensurato);    
         ?>
     </p>
 </body>
